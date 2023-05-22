@@ -1,0 +1,36 @@
+*{
+    border: 1px dotted red;
+    color: aliceblue;
+    margin: 0px;
+
+}
+body{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-rows: 1fr 1fr 10fr;
+
+
+}
+header{
+    grid-column: 1/4;
+    height: 100px;
+    background-color: darkblue;
+}
+nav{
+    grid-row: 2/5;
+    background-color: red;
+}
+article{
+    background-color: yellow;
+}
+aside{
+    grid-column: 3 /4;
+    grid-row: 2 / autofill;
+    background-color: fuchsia;
+    
+}
+main{
+    grid-column: 2;
+    background-color: sandybrown;
+}
