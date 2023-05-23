@@ -1,46 +1,62 @@
 *{
     
     margin: 0px;
-    border: 1px dotted red;
-    
 
 }
 body{
-    background-color: black;
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 5fr 2fr;
-    grid-template-rows: .5fr 1fr 10fr;
-    color: aliceblue;
+    grid-template-rows: 1fr 1fr 10fr;
+    color: black;
+    background-color: #ffedd5;
+    
     
 }
 header{
-
     grid-column: 1/4;
-    background-color: darkblue;
+    background-color: #fb923c;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr
+    grid-template-columns: 1fr 2fr 1fr;
+}
+header input{
+    width: 70%;
 }
 header div{
-    font-size: 50px;
+    font-size: 35px;
+}
+.profile-picture{
+    height: 60px;
+    border: 1px solid navajowhite;
+    overflow: hidden;
+    border-radius: 80%;
+   
 }
 nav{
     grid-row: 2/5;
-    background-color: red;
-
+    background-color:#fdba74;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
   
 }
-a{
+nav a{
     display: flex;
+    padding: 2px;
     align-items: center;
     height: 20px;
-    margin: 5px
+    margin: 5px;
+    text-decoration: none;
+    color: #ea580c;
+    
+}
+nav a:visited{
+    color: #ea580c
 }
 a img{
     height: 30px;
@@ -51,32 +67,56 @@ ul{
 }
 
 
+nav img{
+    filter: invert(35%) sepia(55%) saturate(3044%) hue-rotate(3deg) brightness(99%) contrast(91%);
+
+}
 article{
-    background-color: rgb(12, 145, 101);
-    margin: 10px;
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: 8fr 1fr 1fr 1fr;
+    background-color: #fde047;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
 
 }
 aside{
     grid-column: 3 /4;
     grid-row: 2 / autofill;
-    background-color: fuchsia;
     display: grid;
     grid-row: 2/ 4;
 }
 section{
-    color: rgb(46, 100, 136);
+    color: rgb(7, 29, 44);
+    display: grid;
+    grid-template-rows: 25px ;
 }
-
+.announcement-tab{
+    background-color: aliceblue;
+    margin: 15px;
+    display: grid;
+}
+.announcement{
+    border: #ea580c 1px solid;
+}
+.trending-tab{
+    background-color: aliceblue;
+    margin: 15px;
+    display: grid;
+}
+.trending{
+    border: #ea580c 1px solid;
+}
 main{
     color: black;
-    background-color: sandybrown;
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 400px));
-    margin-left: 5px;
-    margin-right: 5px;
+    gap: 5%;
+    grid-row: 3/ 5;
+
+    grid-template-columns: repeat(auto-fit, minmax(75px, 350px));
+
+    grid-auto-rows: 1fr;
+
     align-items: center;
     justify-content: center;   
     
@@ -89,11 +129,17 @@ main{
     max-width: 100%;
   height: auto;
   object-fit: cover;
+
 }
 figure{
-  display: grid;
-  grid-template-rows: 1fr 4fr 2fr;
-  border: 2px black groove;
+  border: 2px solid #ea580c;
+  border-left: 10px solid #ea580c;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+figure:hover{
+    transition: 1s;
+    transform: scale(1.12);
 }
 .project-buttons{
     display: flex;
